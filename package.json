@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jonathan0212/ERP/issues"
   },
-  "homepage": "https://github.com/Jonathan0212/ERP#readme"
+  "homepage": "https://github.com/Jonathan0212/ERP#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
