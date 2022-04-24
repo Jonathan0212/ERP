@@ -10,24 +10,18 @@ const locationSchema = new Schema(
       type: String,
       
     },
+    inventory: [inventorySchema]
   },
-
-
-    // PLACE CODE FOR GETTING INVENTORY AND CATEGORY HERE
-
-
-
-
-  {
-    toJSON: {
-      getters: true
-    }
-  }
+  //{
+  //  toJSON: {
+  //    getters: true
+  //  }
+  //}
 );
 
 
-// THIS NEEDS TO RETURN INVENTORY (AND CATEGORY???)
-//thoughtSchema.virtual('reactionCount').get(function() {
+// THIS NEEDS TO RETURN INVENTORY
+//locationSchema.virtual('reactionCount').get(function() {
 //  return this.reactions.length;
 //});
 

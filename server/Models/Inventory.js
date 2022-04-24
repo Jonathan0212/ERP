@@ -14,19 +14,18 @@ const inventorySchema = new Schema(
     //  type: Date,
     //  default: Date.now,
     //  get: timestamp => dateFormat(timestamp)
-    //}
+    //},
+
+    category: [categorySchema]
+
   },
-  
-  
-    // PLACE CODE FOR GETTING CATEGORY HERE
 
-
-
-  {
-    toJSON: {
-      getters: true
-    }
-  }
+  // USE IN CASE WE ADD DATE/TIMESTAMP
+  //{
+  //  toJSON: {
+  //    getters: true
+  //  }
+  //}
 );
 
 
