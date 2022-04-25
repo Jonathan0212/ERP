@@ -1,10 +1,10 @@
 const { Schema } = require('mongoose');
-
+const categorySchema = require('./Category');
 
 const inventorySchema = new Schema(
   {
     inventoryQty: {
-      type: Int,
+      type: String,
       required: true,
     },
     

@@ -27,6 +27,7 @@ const typeDefs = gql`
     user(username: String!): User
     location(username: String): [Location]
     inventory: [Inventory]
+  }
 `;
 
 
