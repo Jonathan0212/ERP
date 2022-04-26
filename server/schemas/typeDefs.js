@@ -7,6 +7,12 @@ const typeDefs = gql`
     username: String
     email: String
   }
+  
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Location {
     location: String
     inventory: [Inventory]
@@ -28,6 +34,10 @@ const typeDefs = gql`
     location(username: String): [Location]
     inventory: [Inventory]
   }
+
+  type Mutation {
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
 `;
 
 
