@@ -22,6 +22,11 @@ const userSchema = new Schema(
       minlength: 5
     },    
   },
+  {
+    toJSON: {
+      virtuals: true
+    }
+  }
 );
 
 // set up pre-save middleware to create password

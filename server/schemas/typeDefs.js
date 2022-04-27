@@ -7,6 +7,27 @@ const typeDefs = gql`
     username: String
     email: String
   }
+  type Location {
+    location: String
+    inventory: [Inventory]
+  }
+  type Inventory {
+    inventoryQty: Int
+    category: [Category]
+  }
+  type Category {
+    categoryType: String
+    categoryQty: Int
+    unitQty: Int
+    unitType: String
+  }
+  
+  type Query {
+    users: [User]
+    user(username: String!): User
+    location(username: String): [Location]
+    inventory: [Inventory]
+  }
 `;
 
 
