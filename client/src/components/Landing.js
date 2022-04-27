@@ -2,7 +2,7 @@ import logo from "../images/645736204-huge.jpg"
 function Landing() {
 
     return (
-        <div className="container">
+        <div className="container-fluid">
             <div className="row">
                 <div className="col-8">
                     <img src={logo} style={{ maxWidth: "90%" }} />

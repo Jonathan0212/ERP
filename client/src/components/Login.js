@@ -8,11 +8,13 @@ const GET_USER = gql`
     }
   }
 `;
-function Login({setComponent}) {
+function Login({ setComponent }) {
     const [info, setInfo] = useState({ email: "", password: "" })
-    const [getUser, getUserStatus] = useLazyQuery(GET_USER,{
-        onCompleted:(data)=>{
-
+    const [getUser, getUserStatus] = useLazyQuery(GET_USER, {
+        fetchPolicy: "network-only",
+        onCompleted: (data) => {
+            setComponent("data")
+            console.log(data)
         }
     })
     const handleChange = (e) => {
@@ -20,8 +22,8 @@ function Login({setComponent}) {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-    //    getUser({variables:{username:info.email}})
-    setComponent("data")
+        getUser({ variables: { username: info.email } })
+        // setComponent("data")
     }
     return (
 
@@ -39,9 +41,9 @@ function Login({setComponent}) {
                             <input type="password" name="password" value={info.password} onChange={handleChange} class="form-control" id="exampleInputPassword1" />
                         </div>
                         <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                        <label class="form-check-label" for="exampleCheck1">Admin</label>
-                </div>
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label" for="exampleCheck1">Admin</label>
+                        </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
