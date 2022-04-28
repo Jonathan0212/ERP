@@ -22,8 +22,8 @@ function Login({ setComponent }) {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        getUser({ variables: { username: info.email } })
-        // setComponent("data")
+        // getUser({ variables: { username: info.email } })
+        setComponent("data")
     }
     return (
 

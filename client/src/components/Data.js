@@ -1,21 +1,21 @@
 import { useState } from "react"
 
 const columns = [
-    "type", "bottles", "cans"
+    "type", "bottles", "cans", "kegs", "cost"
 ]
 const data = {
     store1: [
-        { type: "IPA", bottles: 78, cans: 210 },
-        { type: "SOUR", bottles: 72, cans: 220 },
-        { type: "LAGER", bottles: 107, cans: 100 },
-        { type: "STOUT", bottles: 85, cans: 90 },
+        { type: "IPA", bottles: 78, cans: 210, kegs: 23, cost: "$2,000"},
+        { type: "SOUR", bottles: 72, cans: 220, kegs: 40, cost:"$5,200"},
+        { type: "LAGER", bottles: 107, cans: 100, kegs: 70, cost:"$4,375"},
+        { type: "STOUT", bottles: 85, cans: 90, kegs: 53, cost: "$2,356"}
 
     ],
     store2: [
-        { type: "IPA", bottles: 43, cans: 82 },
-        { type: "SOUR", bottles: 92, cans: 50 },
-        { type: "LAGER", bottles: 17, cans: 10 },
-        { type: "STOUT", bottles: 60, cans: 30 },
+        { type: "IPA", bottles: 43, cans: 82, kegs: 15, cost:"$1,798"},
+        { type: "SOUR", bottles: 92, cans: 50, kegs: 60, cost:"$2,200"},
+        { type: "LAGER", bottles: 17, cans: 10, kegs: 8, cost:"$1,589"},
+        { type: "STOUT", bottles: 60, cans: 30, kegs: 78, cost:"$3,212" },
     ]
 }
 
@@ -39,6 +39,8 @@ function Data({ setComponent }) {
                     <th>Type</th>
                     <th>Bottles</th>
                     <th>Cans</th>
+                    <th>Kegs</th>
+                    <th>Cost</th>
                 </tr>
                 {products.map((product) => {
                     return (
