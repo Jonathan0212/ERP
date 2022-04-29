@@ -8,11 +8,11 @@ const categorySchema = new Schema(
       required: true,
     },
     categoryQty: {
-      type: String,
+      type: Number,
       required: true,
     },
     unitQty: {
-      type: String,
+      type: Number,
       required: true
     },
     unitType: {

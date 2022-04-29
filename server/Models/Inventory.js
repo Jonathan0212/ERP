@@ -4,7 +4,7 @@ const categorySchema = require('./Category');
 const inventorySchema = new Schema(
   {
     inventoryQty: {
-      type: String,
+      type: Number,
       required: true,
     },
     
